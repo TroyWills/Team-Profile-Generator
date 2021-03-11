@@ -4,7 +4,8 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const Employee = require("./lib/Employee");
-var createHTML = require('create-html');
+// var createHTML = require('create-html');
+const generatedHTML = require("./src/page-template.js")
 
 // var teamMembersHTML = JSON.stringify(teamMembers);
 // console.log(teamMembers);
@@ -62,11 +63,6 @@ const newEmployee = [
     }
 ]
 
-var html = createHTML({
-    title: "team"
-});
-
-
  function addEmployee() {
      inquirer.prompt(newEmployee).then(responses => {
         
@@ -74,7 +70,7 @@ var html = createHTML({
             createTeam();
         }
         else {
-            fs.writeFile("index.html", JSON.stringify(teamMembers), function (err) {
+            fs.writeFile("index.html", generatedHTML(JSON.stringify(teamMembers)), function (err) {
                 if (err) console.log(error);
             });
         }
