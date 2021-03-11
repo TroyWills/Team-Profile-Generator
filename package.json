@@ -21,6 +21,8 @@
   },
   "homepage": "https://github.com/TroyWills/Title-10-Team-Profile-Generator#readme",
   "dependencies": {
+    "create-html": "^4.1.0",
+    "fs": "0.0.1-security",
     "inquirer": "^8.0.0",
     "path": "^0.12.7"
   }
