@@ -1,4 +1,34 @@
+function generateTeam(team) {
+    // create the HTML element to put team members into 
+    console.log(team);
+    const html = [];
+    // function that wraps each element inside of array in HTML
+    function generateEmployee(employee) {
+        return `
+        <div class = "card">
+            <h2>${employee.getName()}</h2>
+            <h3>${employee.getEmail()}</h3>
+            <h3>${employee.getgitHub()}</h3>
+        </div>
+        `
+      }
 
+    html.push(team
+        .map(employee => generateEmployee(employee))
+        .join("")
+        );
+        return html.join("");
+
+}
+
+
+// const map1 = array1.map(x => x * 2);
+
+
+// export function to generate entire page
+module.exports = team => {
+
+    return `
     <!DOCTYPE html>
 <html lang="en">
 
@@ -24,22 +54,11 @@
     <div class="container">
         <div class="row">
             <div class="team-area col-12 d-flex justify-content-center">
-                
-        <div class = "card">
-            <h2>"t"</h2>
-            <h3>"t"</h3>
-            <h3>"t"</h3>
-        </div>
-        
-        <div class = "card">
-            <h2>"r"</h2>
-            <h3>"r"</h3>
-            <h3>"r"</h3>
-        </div>
-        
+                ${generateTeam(team)}
             </div>
         </div>
     </div>
 </body>
 </html>
-    
+    `;
+};

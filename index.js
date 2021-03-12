@@ -4,10 +4,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 const Employee = require("./lib/Employee");
-var createHTML = require('create-html');
-
-// var teamMembersHTML = JSON.stringify(teamMembers);
-// console.log(teamMembers);
+const generateTeam = require("./src/template")
 
 // User input for constructing team 
 const questions = [
@@ -62,10 +59,18 @@ const newEmployee = [
     }
 ]
 
-var html = createHTML({
-    title: "team"
-});
-
+function generateHTML(teamMembers) {
+    // console.log(teamMembers);
+    // loop through team members and return block of html that has name, email, github username
+        for (let i = 0; i < teamMembers.length; i++) {
+            document.getElementById
+            const element = teamMembers[i];
+            
+         }
+    // add string of html to boilerplate html (top of HTML -- user input -- closing tags)
+    // top of html 
+    // 
+};
 
  function addEmployee() {
      inquirer.prompt(newEmployee).then(responses => {
@@ -74,7 +79,7 @@ var html = createHTML({
             createTeam();
         }
         else {
-            fs.writeFile("index.html", JSON.stringify(teamMembers), function (err) {
+            fs.writeFile("index.html", generateTeam(teamMembers), function (err) {
                 if (err) console.log(error);
             });
         }
