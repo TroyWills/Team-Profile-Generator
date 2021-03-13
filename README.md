@@ -1,9 +1,8 @@
-Instructions for use:
-    1. run command "npm install jest inquirer path" to install dependencies 
-    2. To generate team from command line - use command line prompt "npm run start"
+Description: Command prompt questions that will generate HTML based on user input 
 
-Current Progress & Future Developments:
-    1. Need to add more question prompts for manager, intern, engineer, and run JEST tests. 
-        -The jest test will account for speed, reliability. 
-    2. Need a src.js/ page to auto generate HTML upon running the cmd prompt. 
-    
+Instructions for use:
+    1. run in bash`npm init`
+    2. run in bash `npm install fs path inquirer`
+
+Future developments: 
+    Will install jest package to test for efficiency of classes created 
