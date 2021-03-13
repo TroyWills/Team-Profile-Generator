@@ -31,13 +31,13 @@ function createTeam() {
     inquirer.prompt(questions).then(responses => {
 
 
-        var employeeName = JSON.stringify(responses.name);
+        var employeeName = responses.name;
         // console.log(employeeName);
 
-        var employeeEmail = JSON.stringify(responses.eMail);
+        var employeeEmail = responses.eMail;
         // console.log(employeeEmail);
 
-        var employeeGithub = JSON.stringify(responses.gitHub);
+        var employeeGithub = responses.gitHub;
         // console.log(employeeGithub);
 
         const newEmployee = new Employee(employeeName, employeeEmail, employeeGithub);

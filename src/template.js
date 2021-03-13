@@ -5,10 +5,10 @@ function generateTeam(team) {
     // function that wraps each element inside of array in HTML
     function generateEmployee(employee) {
         return `
-        <div class = "card">
-            <h2>${employee.getName()}</h2>
-            <h3>${employee.getEmail()}</h3>
-            <h3>${employee.getgitHub()}</h3>
+        <div class = "card col-md-2">
+        <div class = "row"> <h6> Name: ${employee.getName()} </h6> </div>
+        <div class = "row"> <h6> E-mail Address: ${employee.getEmail()} </h6> </div>
+        <div class = "row"> <h6> GitHub Username: ${employee.getgitHub()} </h6> </div>
         </div>
         `
       }
